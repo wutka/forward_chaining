@@ -1,8 +1,11 @@
-# Backchain - Backward-chaining Rule Evaluator
+# Forwardchain - Forward-chaining Rule Evaluator
 
 This is a simple assertion & rule evaluator that uses
-backward chaining to attempt to prove a rule. The
-format of an assertion is:
+forward chaining to attempt to prove a rule. Whenever it
+loads the knowledge base or changes it, it uses forward
+chaining to compute everything that could be proved.
+
+The format of an assertion is:
 ```
 name value1 value2 value3 ... valueN
 ```
@@ -36,6 +39,7 @@ of the following commands:
 ```
 :a    -  List assertions
 :r    -  List rules
+:w    -  List working (everything computed from assertions and rules)
 +a    -  Start adding new assertions (blank line when done)
 +r    -  Start adding new rules (blank line when done)
 -an   -  Delete assertion n (numbered starting at 1)

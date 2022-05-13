@@ -6,7 +6,7 @@ import Lexer
 import Data.Either
 
 makeKnowledgeBase :: [Either Assertion Rule] -> KnowledgeBase
-makeKnowledgeBase parsed = KnowledgeBase (lefts parsed) (rights parsed)
+makeKnowledgeBase parsed = KnowledgeBase (lefts parsed) (rights parsed) [] False
 
 loadFile :: String -> IO KnowledgeBase
 loadFile filename = do
